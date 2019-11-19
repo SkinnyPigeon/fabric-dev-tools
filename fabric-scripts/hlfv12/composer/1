@@ -1,0 +1,12 @@
+: 1574091298:0;history --help
+: 1574091306:0;history -help
+: 1574091309:0;history?
+: 1574091425:0;history --help
+: 1574091427:0;clear
+: 1574091432:0;history
+: 1574091460:0;uname -m
+: 1574091632:0;echo $PWD
+: 1574091890:0;clear
+: 1574091894:0;docker logs peer0.org1.example.com
+: 1574091959:0;ls
+: 1574091972:0;cd ..

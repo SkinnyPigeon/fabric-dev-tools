@@ -1,0 +1,32 @@
+: 1574092018:0;ls
+: 1574092025:0;DIR=`pwd`
+: 1574092127:0;composer --version
+: 1574092534:0;ls
+: 1574092541:0;vi createComposerProfile.sh
+: 1574092557:0;vi createPeerAdminCard.sh
+: 1574092720:0;ls
+: 1574092725:0;vi DevServer_connection.json
+: 1574092883:0;PRIVATE_KEY=$DIR/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/114aab0e76bf0c78308f89efc4b8c9423e31568da0c340ca187a9b17aa9a4457_sk
+: 1574093287:0;CERT=$DIR/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
+: 1574093308:0;vi DevServer_connection.json
+: 1574093373:0;ls
+: 1574093377:0;vi D
+: 1574093382:0;ls
+: 1574093386:0;vi DevServer_connection.json
+: 1574093413:0;ls
+: 1574093420:0;vi DevServer_connection.json
+: 1574093739:0;clear
+: 1574093780:0;CARDOUTPUT=/tmp/PeerAdmin@hlfv1.card
+: 1574093869:0;composer card create -p DevServer_connection.json -u PeerAdmin -c $CERT -k $PRIVATE_KEY -r PeerAdmin -r ChannelAdmin --file $CARDOUTPUT
+: 1574093934:0;composer card import --file /tmp/PeerAdmin@hlfv1.card
+: 1574093962:0;composer card list
+: 1574093970:0;composer peer channel list
+: 1574093982:0;composer card list
+: 1574093990:0;rm /tmp/PeerAdmin@hlfv1.card
+: 1574094120:0;ARCH=$ARCH docker-compose -f composer/docker-compose.yml stop
+: 1574094183:0;ARCH=$ARCH docker-compose -f composer/docker-compose.yml down
+: 1574094237:0;composer card delete -c PeerAdmin@hlfv1
+: 1574094263:0;clear
+: 1574094265:0;docker ps
+: 1574094269:0;docker images
+: 1574104559:0;cd 
