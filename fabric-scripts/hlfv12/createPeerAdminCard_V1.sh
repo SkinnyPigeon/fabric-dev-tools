@@ -100,8 +100,7 @@ cat << EOF > DevServer_connection.json
                 "orderer.example.com"
             ],
             "peers": {
-                "peer0.org1.example.com": {},
-                "peer1.org1.example.com": {}
+                "peer0.org1.example.com": {}
             }
         }
     },
@@ -109,8 +108,7 @@ cat << EOF > DevServer_connection.json
         "Org1": {
             "mspid": "Org1MSP",
             "peers": [
-                "peer0.org1.example.com",
-                "peer1.org1.example.com"
+                "peer0.org1.example.com"
             ],
             "certificateAuthorities": [
                 "ca.org1.example.com"
@@ -125,9 +123,6 @@ cat << EOF > DevServer_connection.json
     "peers": {
         "peer0.org1.example.com": {
             "url": "grpc://${HOST}:7051"
-        },
-        "peer1.org1.example.com": {
-            "url": "grpc://${HOST}:17051"
         }
     },
     "certificateAuthorities": {
@@ -139,7 +134,7 @@ cat << EOF > DevServer_connection.json
 }
 EOF
 
-PRIVATE_KEY=`ls ${DIR}/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/*_sk`
+PRIVATE_KEY="${DIR}"/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/6a965b9bdd94a0a33a5a768cf0d16aaa1294f54040b3176e8f6e4ce90aa383c6_sk
 CERT="${DIR}"/composer/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
 
 if [ "${NOIMPORT}" != "true" ]; then
